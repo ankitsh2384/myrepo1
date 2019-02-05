@@ -109,3 +109,7 @@ p + theme_tufte()
 p + theme_tufte() + scale_color_tableau()
 p + theme_excel() + scale_color_excel()
 p + theme_excel() + scale_color_excel_new()
+
+
+
+# for the more detailed stuff, the ggplot reference (documentation ) go: https://ggplot2.tidyverse.org/reference/index.html
