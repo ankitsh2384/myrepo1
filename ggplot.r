@@ -80,3 +80,17 @@ ggplot(diamonds, aes(x=price)) +  geom_histogram(bins=100, aes(color=cut))
 
 ggplot(diamonds, aes(x=price)) +  geom_histogram(bins=20, aes(fill=cut))
 
+
+ggplot(diamonds, aes(x=cut, y=price)) +  geom_boxplot()
+
+ggplot(diamonds, aes(x=cut, y=price)) +  
+    geom_jitter(shape=1, size=1, aes(color=cut)) + geom_violin()
+
+
+
+ggplot(diamonds, aes(x=cut, y=price)) + 
+    geom_jitter(alpha=1/5, size=1, shape=1, width=0.35, aes(color=carat)) + 
+    geom_violin(alpha=1/2, color='grey50', draw_quantiles=c(.25, .5, .75)) + 
+    scale_color_gradient('Diamond Size', low='#56B1F7', high='#c91010') + 
+    scale_y_continuous(labels=scales::dollar) + 
+    labs(x='Cut', y='Price', title='Price vs Cut and Carat')
