@@ -55,3 +55,15 @@ diamonds %>%
     arrange(AvgPrice)
 
 
+library(dplyr)
+
+
+diamonds
+
+diamondColors <- readr::read_csv('data/DiamondColors.csv')
+
+diamondColors
+
+diamondJoin <- left_join(diamonds, diamondColors, by=c('color'='Color'))
+
+diamondJoin
